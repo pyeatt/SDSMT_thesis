@@ -1,0 +1,3 @@
+\input docstrip
+\generateFile{thesis.cls}{t}{\from{thesis.dtx}{class}}
+\end

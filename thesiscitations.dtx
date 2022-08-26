@@ -1,0 +1,235 @@
+% \iffalse meta-comment
+%  This file should be thesiscitations.dtx
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                               %
+%%    Thesis citation style for LaTeX2e                          %
+%%    South Dakota School of Mines and Technology                %
+%%    by Larry Pyeatt       May 2017                             %
+%%                                                               %
+%%    Based on the standard LaTeX chicago citation style         %
+%%                                                               %
+%%%%%    NOT GUARANTEED TO PASS GRADUATE SCHOOL STANDARDS    %%%%%
+%%        BUT CLOSE ENOUGH NOT TO BE A WASTE OF TIME             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  This file is distributed in doctex format and contains both
+%  documentation and macros in one file.  You need to generate
+%  the documentation and the class file as follows:
+%
+%  STEP 1 - save the dtx file
+%    Save this file as ``thesis.dtx''
+%  STEP 2 - generate documentation
+%    Type ``latex thesis.dtx'' to create thesis.dvi
+%    You can print thesis.dvi or view it to see how
+%    the thesis class works.
+%  STEP 3 - generate the class file
+%    1. Create a new file ``thesis.drv'' that contains:
+%
+%       \input docstrip
+%       \generateFile{thesis.cls}{t}{\from{thesis.dtx}{class}}
+%       \end
+%       
+%       If you cut and paste from here, don't forget to delete the `%' 
+%       characters at the beginning of each line.
+%
+%    2. Type ``latex thesis.drv'' to  create the .cls file. 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \fi
+% \iffalse
+%%
+%% File `thesiscitations.dtx'.
+%% Copyright (C) 2017 by Larry Pyeatt
+% \fi
+% \iffalse
+%<*driver>
+\documentclass{ltxdoc}
+\textwidth 5in
+\textheight 8.5in
+\evensidemargin 0.5in
+\oddsidemargin 0.5in
+\headsep 0in
+\topmargin 0in
+\headheight 0in
+\parindent 0in
+\usepackage{xspace}
+\begin{document}
+\OnlyDescription
+\DocInput{thesiscitations.dtx}
+%\input docstrip
+%\generateFile{thesiscitations.sty}{t}{\from{thesiscitations.dtx}{style}}
+%\end
+\end{document}
+%</driver>
+% \fi
+% \iffalse
+%<style>\NeedsTeXFormat{LaTeX2e}
+%<style>\ProvidesPackage{thesiscitations}[2017/01/18 South Dakota School of Mines and Technology Thesis and Dissertation citation style]
+% \fi
+%
+%
+%\title{Disseration and Thesis Citation Style}
+%\author{Larry D. Pyeatt}
+%\maketitle
+% \section{Citation Style}
+% Your main file should have |\documentclass[12pt]{thesis}| as the
+% first line.
+%
+% To use this thesis citation style, put |\usepackage{thesiscitations}| in
+% your preamble, and use |\bibliographystyle{thesis}| to select the matching
+% bibliography style.
+%
+% \section{Citation Commands}
+% The |thesiscitations| style adds several variations of the citation macro,
+% based on the standard \LaTeX\xspace Chicago bibliography style.
+%
+% \DescribeMacro{\cite} The |\cite{}| macro works just like in any
+% other document.  It produces citations with full author list and
+% year.  eg. (Brown 1978; Jarke, Turner, Stohl, et al. 1985)
+% \iffalse
+\thesiscitationstrue
+\let\@internalcite\cite
+\def\cite{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##1 ##3}\@internalcite}
+%\fi
+%
+% \DescribeMacro{\citeNP} The |\citeNP{}| macro creates a citation
+% that does not have parentheses.  
+%    eg. Brown 1978; Jarke, Turner and Stohl 1985
+% \iffalse
+\def\citeNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##1 ##3}\@internalcite}
+% \fi
+%
+% \DescribeMacro{\citeN} The |\citeN{}| macro
+% produces citations with the full author list and year, but
+%    can be used as nouns in a sentence; no parentheses appear around
+%    the author names, but only around the year.
+%      eg. Shneiderman (1978) states that......
+%    |\citeN| should only be used for a single citation.
+% \iffalse
+\def\citeN{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2)\else{)}\fi}%
+    \def\citeauthoryear##1##2##3{##1 (##3}\@citedata}
+% \fi
+%
+% \DescribeMacro{\citeA} The |\citeA{}| macro
+%    produces citations with only the full author list.
+%    eg. (Brown; Jarke, Turner and Stohl)
+% \iffalse
+\def\citeA{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##1}\@internalcite}
+% \fi
+%
+% \DescribeMacro{\citeANP} The |\citeANP{}| macro
+%    produces citations with only the full author list without 
+% parentheses.
+%    eg. Brown; Jarke, Turner and Stohl
+% \iffalse
+\def\citeANP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##1}\@internalcite}
+% \fi
+%
+% There are several macros for creating abbreviated citations that use
+% the ``et al.'' construct. 
+%
+% \DescribeMacro{\shortcite} The |\shortcite{}| macro
+% produces citations with abbreviated author and year.
+% \iffalse
+\def\shortcite{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##2 ##3}\@internalcite}
+% \fi
+%
+% \DescribeMacro{\shortciteNP} The |\shortciteNP{}| macro
+% produces citations with abbreviated author and year and 
+% no parentheses
+% \iffalse
+\def\shortciteNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##2 ##3}\@internalcite}
+% \fi
+%
+% \DescribeMacro{\shortciteN} The |\shortciteN{}| macro
+% produces citations with abbreviated author and year that
+%    can be used as nouns in a sentence; no parentheses appear around
+%    the author names, but only around the year.
+% \iffalse
+\def\shortciteN{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2)\else{)}\fi}%
+    \def\citeauthoryear##1##2##3{##2 (##3}\@citedata}
+% \fi
+%
+% \DescribeMacro{\shortciteA} The |\shortciteA{}| macro
+% produces citations with abbreviated author and no year.
+% \iffalse
+\def\shortciteA{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##2}\@internalcite}
+% \fi
+%
+% \DescribeMacro{\shortciteANP} The |\shortciteANP{}| macro
+% produces citations with abbreviated author and year, but
+% no parentheses.
+% \iffalse
+\def\shortciteANP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##2}\@internalcite}
+% \fi
+%
+%  There are macros for creating citations that only contain the year.
+%
+% \DescribeMacro{\citeyear} The |\citeyear| macro
+% produces citations with only the year.
+% \iffalse
+\def\citeyear{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##3}\@citedata}
+% \fi
+%
+% \DescribeMacro{\citeyearNP} The |\citeyearNP| macro
+% produces citations with only the year and no parentheses.
+% \iffalse
+\def\citeyearNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##3}\@citedata}
+% \fi
+% Place commas in-between citations in the same |\citeyear|,
+% |\citeyearNP|, |\citeN|, or |\shortciteN command|.  Use something like
+% |\citeN{ref1,ref2,ref3}| and |\citeN{ref4}| for a list.
+% \iffalse
+\def\@citedata{%
+  \@ifnextchar [{\@tempswatrue\@citedatax}%
+    {\@tempswafalse\@citedatax[]}%
+  }
+\def\@citedatax[#1]#2{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi%
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do%
+    {\@citea\def\@citea{, }\@ifundefined% by Young
+      {b@\@citeb}{{\bf ?}%
+        \@warning{Citation `\@citeb' on page \thepage \space undefined}}%
+      {\csname b@\@citeb\endcsname}}}{#1}}%
+\def\@citex[#1]#2{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi%
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do%
+    {\@citea\def\@citea{; }\@ifundefined% by Young
+      {b@\@citeb}{{\bf ?}%
+        \@warning{Citation `\@citeb' on page \thepage \space undefined}}%
+      {\csname b@\@citeb\endcsname}}}{#1}}%
+\def\@biblabel#1{}
+\newlength{\bibhang}
+\setlength{\bibhang}{2em}
+\newdimen\bibindent
+\bibindent=1.5em
+\@ifundefined{refname}%
+   {\@ifundefined{chapter}%
+     {\newcommand{\refname}{References}}%
+     {\newcommand{\refname}{Bibliography}}%
+   }%
+   {}%
+% \fi

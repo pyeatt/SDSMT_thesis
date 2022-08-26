@@ -1,0 +1,107 @@
+%%
+%% This is file `thesiscitations.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% thesiscitations.dtx  (with options: `package')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from thesiscitations.sty.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file thesiscitations.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                               %
+%%    Thesis citation style for LaTeX2e                          %
+%%    South Dakota School of Mines and Technology                %
+%%    by Larry Pyeatt       May 2017                             %
+%%                                                               %
+%%    Based on the standard LaTeX chicago citation style         %
+%%                                                               %
+%%%%%    NOT GUARANTEED TO PASS GRADUATE SCHOOL STANDARDS    %%%%%
+%%        BUT CLOSE ENOUGH NOT TO BE A WASTE OF TIME             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% File `thesiscitations.dtx'.
+%% Copyright (C) 2017 by Larry Pyeatt
+\thesiscitationstrue
+\let\@internalcite\cite
+\def\cite{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##1 ##3}\@internalcite}
+\def\citeNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##1 ##3}\@internalcite}
+\def\citeN{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2)\else{)}\fi}%
+    \def\citeauthoryear##1##2##3{##1 (##3}\@citedata}
+\def\citeA{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##1}\@internalcite}
+\def\citeANP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##1}\@internalcite}
+\def\shortcite{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##2 ##3}\@internalcite}
+\def\shortciteNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##2 ##3}\@internalcite}
+\def\shortciteN{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2)\else{)}\fi}%
+    \def\citeauthoryear##1##2##3{##2 (##3}\@citedata}
+\def\shortciteA{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##2}\@internalcite}
+\def\shortciteANP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##2}\@internalcite}
+\def\citeyear{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{(##1\if@tempswa , ##2\fi)}%
+    \def\citeauthoryear##1##2##3{##3}\@citedata}
+\def\citeyearNP{\def\@citeseppen{-1000}%
+    \def\@cite##1##2{##1\if@tempswa , ##2\fi}%
+    \def\citeauthoryear##1##2##3{##3}\@citedata}
+\def\@citedata{%
+  \@ifnextchar [{\@tempswatrue\@citedatax}%
+    {\@tempswafalse\@citedatax[]}%
+  }
+\def\@citedatax[#1]#2{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi%
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do%
+    {\@citea\def\@citea{, }\@ifundefined% by Young
+      {b@\@citeb}{{\bf ?}%
+        \@warning{Citation `\@citeb' on page \thepage \space undefined}}%
+      {\csname b@\@citeb\endcsname}}}{#1}}%
+\def\@citex[#1]#2{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi%
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do%
+    {\@citea\def\@citea{; }\@ifundefined% by Young
+      {b@\@citeb}{{\bf ?}%
+        \@warning{Citation `\@citeb' on page \thepage \space undefined}}%
+      {\csname b@\@citeb\endcsname}}}{#1}}%
+\def\@biblabel#1{}
+\newlength{\bibhang}
+\setlength{\bibhang}{2em}
+\newdimen\bibindent
+\bibindent=1.5em
+\@ifundefined{refname}%
+   {\@ifundefined{chapter}%
+     {\newcommand{\refname}{References}}%
+     {\newcommand{\refname}{Bibliography}}%
+   }%
+   {}%
+\endinput
+%%
+%% End of file `thesiscitations.sty'.

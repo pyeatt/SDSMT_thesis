@@ -1,0 +1,102 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021 Gentoo Linux) (preloaded format=latex 2022.5.25)  26 AUG 2022 08:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.drv
+(./thesis.drv
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/usr/share/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count179
+\emptyLines=\count180
+\processedLines=\count181
+\commentsRemoved=\count182
+\commentsPassed=\count183
+\codeLinesPassed=\count184
+\TotalprocessedLines=\count185
+\TotalcommentsRemoved=\count186
+\TotalcommentsPassed=\count187
+\TotalcodeLinesPassed=\count188
+\NumberOfFiles=\count189
+\inFile=\read2
+\inputcheck=\read3
+\off@0=\count190
+\off@1=\count191
+\off@2=\count192
+\off@3=\count193
+\off@4=\count194
+\off@5=\count195
+\off@6=\count196
+\off@7=\count197
+\off@8=\count198
+\off@9=\count199
+\off@10=\count266
+\off@11=\count267
+\off@12=\count268
+\off@13=\count269
+\off@14=\count270
+\off@15=\count271
+\@maxfiles=\count272
+\@maxoutfiles=\count273
+
+Utility: `docstrip' v2.6a <2020-07-07>
+English documentation    <2020-07-11>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./thesis.cls 
+\openout0 = `./thesis.cls'.
+
+
+Processing file thesis.dtx (class) -> thesis.cls
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % <*driver . . . . .
+. . . . . . . . % % % . > % % <class . > <class . > <class . > <class . >
+<class . > <class . > <class . > <class . > <class . > <class . > <class . >
+<class . > <class . > . . . . . . . % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % . . . . % % % % % . . . % % % % %
+. . . % % % % % % % % % % % % . . . . % % % % % . . . . % % % % % % . . . . %
+% % % % % % % % % % % % . . % % % % . . % % % % . . % % % % % % % % . . % % %
+% % % . . % % % % % . . % % % % % % % % . . % % % % % % % % % % . . . . . % %
+% % % % % % % % % . . % % % % % . . % % % % % . . % % % % % % % % % . . . . .
+. . . . . % . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+. . . . % % % % % % % . . . . . . . . . % . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . . . % % % % % % . . . . % % % % % % . . . . % %
+% % % % . . . . . % % % % % % . . . . . % % % % % % . . . . . % % % % % % % %
+. . . . % % % % % % % . . . . % % % % % % . . . . % % % % % % . . . . . % % %
+% % % % % % % % % % % % % % % % . . . . . . . . . . . . . . . . % % % % % % %
+. . . . . . % % % % % . . . . . . . . . . . . . . . . . . . . . . . . % % % %
+% % % . . . . . . % % % % % % % % . . . . . . . % % % % % % % % % % % % % % %
+% . . % . . . . . . . . % % % % % % % % % % % % % % % % % . . . . % % % % % %
+% % % % . . % % % . . . . . . . % . . . . . . . . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . % % % % % . % % % . % % % % % . % % . % % . % %
+. % . % % % % % % % . % % % % % % % % % . % % % . % % % % % % . % % % % . % .
+% . % . % % % % % % . % % % . % % % % . % % % % % % % % % % % . % . % % % % %
+% . % % % % % % % . % % % . % % % % % % % % . % % % % % . % % . % % % % % % %
+% % % % % % % % % . % % % % % % . / % % % % % % % % % % % % % % % . % % % % %
+% % % % % % % . % . % % % % . % % % . % . % . % . % . % % . % . % % % % . % %
+% % . % . % % % % % % . % . %
+Lines  processed: 996
+Comments removed: 548
+Comments  passed: 71
+Codelines passed: 362
+
+ ) 
+Here is how much of TeX's memory you used:
+ 331 strings out of 480852
+ 3533 string characters out of 5902409
+ 285887 words of memory out of 5000000
+ 17672 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 62 hyphenation exceptions out of 8191
+ 13i,0n,18p,259b,121s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+No pages of output.
