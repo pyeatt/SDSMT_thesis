@@ -1,4 +1,4 @@
-
+<H1>The Unofficial South Dakota School of Mines and Technology LaTeX Thesis and Dissertation Class</H1>
 
 The complete distribution contains all of the files that you need for using LaTeX to format your South Dakota School of Mines and Technology thesis or dissertation.
 An example of how to use this LaTeX package is also provided (<code>harvey.tex</code>, <code>harvey.bib</code>, <code>images/gnu.pdf</code> and <code>images/gnat.pdf</code>).
