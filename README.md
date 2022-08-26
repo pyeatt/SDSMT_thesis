@@ -1,16 +1,9 @@
 
 
- The complete distribution contains:
-       Readme
-       Makefile
-       setup.bat
-       thesis.dtx
-       thesis.drv
-       thesiscitations.dtx
-       thesiscitations.drv
-       thesis.bst
-       An example of how to use this class 
-	   (harvey.tex, harvey.bib, images/gnu.pdf and images/gnat.pdf)
+ The complete distribution contains all of the files that you need for using LaTeX to format your South Dakota School of Mines and Technology thesis or dissertation.
+
+       An example of how to use this LaTeX package is also provided
+	   ('harvey.tex', harvey.bib, images/gnu.pdf and images/gnat.pdf).
 
  This class is distributed in doctex format and contains both
  documentation and macros in the .dtx files.  You need to generate
