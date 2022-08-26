@@ -33,8 +33,8 @@ If that fails, you can generate everything manually
   d. the thesis class works.
 
 2. To generate the class file:
-   a. Type ``pdflatex thesis.drv'' to  create the thesis.cls file.
-   b. Type ``pdflatex thesiscitations.drv'' to  create the thesiscitations.sty file.
+   a. Type ``pdflatex thesis.drv'' to  create the <code>thesis.cls</code> file.
+   b. Type ``pdflatex thesiscitations.drv'' to  create the <code>thesiscitations.sty</code> file.
 
 3. To look at Harvey's thesis:
    a. Type "pdflatex harvey"
