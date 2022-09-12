@@ -23,16 +23,19 @@ An example of how to use this LaTeX package is also provided (<code>harvey.tex</
 If the automatic setup fails, you can generate everything manually
 
 1. To generate documentation:
+
   a. Type "pdflatex thesis.dtx" to create thesis.pdf
   b. Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf
   c. You can print thesis.pdf or view it to see how
   d. the thesis class works.
 
 2. To generate the class file:
+
    a. Type "pdflatex thesis.drv" to  create the <code>thesis.cls</code> file.
    b. Type "pdflatex thesiscitations.drv" to  create the <code>thesiscitations.sty</code> file.
 
 3. To look at Harvey's thesis:
+
    a. Type "pdflatex harvey"
    b. Type "bibtex harvey"
    c. Type "makeindex harvey"
