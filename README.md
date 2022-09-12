@@ -24,10 +24,10 @@ If the automatic setup fails, you can generate everything manually
 
 1. To generate documentation:
 
-  a. Type "pdflatex thesis.dtx" to create thesis.pdf
-  b. Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf
-  c. You can print thesis.pdf or view it to see how
-  d. the thesis class works.
+a. Type "pdflatex thesis.dtx" to create thesis.pdf
+b. Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf
+c. You can print thesis.pdf or view it to see how
+d. the thesis class works.
 
 2. To generate the class file:
 
