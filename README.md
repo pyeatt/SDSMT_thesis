@@ -40,6 +40,7 @@ If the automatic setup fails, you can generate everything manually
    e. Type "pdflatex harvey"
 
 <H4>Overleaf</H4>
+
 1. Download files & unzip
 2. Create new blank project in Overleaf
 3. Upload all TEX (.tex .bib .dtx .cls .sty) files
