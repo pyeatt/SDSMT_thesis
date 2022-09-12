@@ -40,11 +40,11 @@ If the automatic setup fails, you can generate everything manually
    e. Type "pdflatex harvey"
 
 <H4>Overleaf</H4>
-   1. Download files & unzip
-   2. Create new blank project in Overleaf
-   3. Upload all TEX (.tex .bib .dtx .cls .sty) files
-   4. Use re-name harvey.tex and use that as the primary .tex file
-   5. by default, images need to be in a folder labelled "images" 
+1. Download files & unzip
+2. Create new blank project in Overleaf
+3. Upload all TEX (.tex .bib .dtx .cls .sty) files
+4. Use re-name harvey.tex and use that as the primary .tex file
+5. by default, images need to be in a folder labelled "images" 
 
 
 
