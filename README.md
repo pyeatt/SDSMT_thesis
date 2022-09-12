@@ -37,7 +37,7 @@ If the automatic setup fails, you can generate everything manually
   </ol>
   
 <li> To look at Harvey's thesis:</li>
-<ol>
+<ol type="a">
 <li> Type "pdflatex harvey"</li>
 <li> Type "bibtex harvey"</li>
 <li> Type "makeindex harvey"</li>
@@ -51,7 +51,7 @@ If the automatic setup fails, you can generate everything manually
 1. Download files & unzip
 2. Create new blank project in Overleaf
 3. Upload all TEX (.tex .bib .dtx .cls .sty) files
-4. Use re-name harvey.tex and use that as the primary .tex file
+4. Re-name <code>harvey.tex</code> and use that as the primary .tex file
 5. by default, images need to be in a folder labelled "images" 
 
 
