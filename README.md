@@ -25,9 +25,9 @@ If the automatic setup fails, you can generate everything manually
 <ol>
 <li> To generate documentation:</li>
  <ol type="a">
- <li> Type "pdflatex thesis.dtx" to create thesis.pdf </li>
- <li> Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf</li>
- <li> You can print thesis.pdf or view it to see how the thesis class works.</li>
+ <li> Type "pdflatex thesis.dtx" to <code>create thesis.pdf</code> </li>
+ <li> Type "pdflatex thesiscitations.dtx" to create <code>thesiscitations.pdf</code></li>
+ <li> You can print <code>thesis.pdf</code> or view it to see how the thesis class works.</li>
  </ol>
 
 <li> To generate the class file:</li>
@@ -37,13 +37,13 @@ If the automatic setup fails, you can generate everything manually
   </ol>
   
 <li> To look at Harvey's thesis:</li>
-
-    a. Type "pdflatex harvey"
-    b. Type "bibtex harvey"
-    c. Type "makeindex harvey"
-    d. Type "pdflatex harvey"
-    e. Type "pdflatex harvey"
-
+<ol>
+<li> Type "pdflatex harvey"</li>
+<li> Type "bibtex harvey"</li>
+<li> Type "makeindex harvey"</li>
+<li> Type "pdflatex harvey"</li>
+<li> Type "pdflatex harvey"</li>
+</ol>
 </ol>
 
 <H4>Overleaf</H4>
