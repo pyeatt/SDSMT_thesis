@@ -22,25 +22,29 @@ An example of how to use this LaTeX package is also provided (<code>harvey.tex</
 <H4>Manual setup</H4>
 If the automatic setup fails, you can generate everything manually
 
-1. To generate documentation:
- <ul>
+<ol>
+<li> To generate documentation:</li>
+ <ol type="a">
  <li> a. Type "pdflatex thesis.dtx" to create thesis.pdf </li>
  <li> b. Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf</li>
  <li> c. You can print thesis.pdf or view it to see how</li>
  <li> d. the thesis class works.</li>
- </ul>
-2. To generate the class file:
+ </ol>
+
+<li> To generate the class file:</li>
 
     a. Type "pdflatex thesis.drv" to  create the <code>thesis.cls</code> file.
     b. Type "pdflatex thesiscitations.drv" to  create the <code>thesiscitations.sty</code> file.
 
-3. To look at Harvey's thesis:
+<li> To look at Harvey's thesis:</li>
 
     a. Type "pdflatex harvey"
     b. Type "bibtex harvey"
     c. Type "makeindex harvey"
     d. Type "pdflatex harvey"
     e. Type "pdflatex harvey"
+
+</ol>
 
 <H4>Overleaf</H4>
 
