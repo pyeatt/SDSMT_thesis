@@ -25,17 +25,17 @@ If the automatic setup fails, you can generate everything manually
 <ol>
 <li> To generate documentation:</li>
  <ol type="a">
- <li> a. Type "pdflatex thesis.dtx" to create thesis.pdf </li>
- <li> b. Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf</li>
- <li> c. You can print thesis.pdf or view it to see how</li>
- <li> d. the thesis class works.</li>
+ <li> Type "pdflatex thesis.dtx" to create thesis.pdf </li>
+ <li> Type "pdflatex thesiscitations.dtx" to create thesiscitations.pdf</li>
+ <li> You can print thesis.pdf or view it to see how the thesis class works.</li>
  </ol>
 
 <li> To generate the class file:</li>
-
-    a. Type "pdflatex thesis.drv" to  create the <code>thesis.cls</code> file.
-    b. Type "pdflatex thesiscitations.drv" to  create the <code>thesiscitations.sty</code> file.
-
+ <ol type="a">
+    <li> Type "pdflatex thesis.drv" to  create the <code>thesis.cls</code> file.</li>
+    <li> Type "pdflatex thesiscitations.drv" to  create the <code>thesiscitations.sty</code> file.</li>
+  </ol>
+  
 <li> To look at Harvey's thesis:</li>
 
     a. Type "pdflatex harvey"
