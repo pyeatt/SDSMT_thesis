@@ -280,7 +280,7 @@
 % \iffalse
 \newcommand{\make@signatureline}[1]{{%\footnotesize
 \noindent\parbox{\textwidth}{\noindent\parbox[t][2\baselineskip]{4in}{\noindent\rule{4in}{1pt}\\\raggedright\noindent #1}\hfill\noindent\parbox[t]{1.5in}{\rule{1.5in}{1pt}\\\noindent Date}}}}
-\newcommand{\make@signatures}{{\footnotesize\enlargethispage{\baselineskip}}%
+\newcommand{\make@signatures}{{}%
 }
 \newcommand{\signatureline}[1]{\g@addto@macro\make@signatures{\par\vfill\noindent\make@signatureline{#1}}}
 % \fi
