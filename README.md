@@ -63,7 +63,7 @@ After that:
 3. Re-name <code>harvey.tex</code> and use that as the primary LaTeX file or copy/paste from <code>harvey.tex</code> into <code>main.tex</code>
 4. by default, images need to be in a folder labelled "images" 
 
-
+After uploading to Overleaf, you can uninstall LaTeX if your computer is low on disk space.
 
 <H2>Getting Started</H2>
 
