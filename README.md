@@ -48,10 +48,16 @@ If the automatic setup fails, you can generate everything manually
 
 <H4>Overleaf</H4>
 
-You will have to generate the <code>thesis.cls</code> and <code>thesiscitations.pdf</code> files before you upload your thesis to overleaf.  This means that you will need access to a system that has at least a minimal LaTeX installed.  There are many LaTeX packages available for Windows, Linux, and MacOS.  Once you have LaTeX installed, just follow the instructions above to create the <code>thesis.cls</code> and <code>thesiscitations.pdf</code> files.
+You will have to generate the <code>thesis.cls</code> and <code>thesiscitations.pdf</code> files 
+before you upload your thesis to overleaf.  This means that you will need access to a system that
+has at least a minimal LaTeX installed.  There are many LaTeX packages available for Windows,
+Linux, and MacOS.  I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html). 
+If you are using Linux, the best way to install it is through the system package manager
+(<code>apt</code> <code>yum</code> <code>emerge</code>, etc). Once you have LaTeX installed,
+just follow the instructions above to create the
+<code>thesis.cls</code> and <code>thesiscitations.pdf</code> files.
 
 After that:
-
 1. Create new blank project in Overleaf
 2. Upload all TEX (.tex .bib .dtx .cls .sty) files
 3. Re-name <code>harvey.tex</code> and use that as the primary .tex file
