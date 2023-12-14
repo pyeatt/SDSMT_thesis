@@ -57,7 +57,7 @@ Linux, and MacOS.  I recommend [TeXLive](https://www.tug.org/texlive/acquire-net
 If you are using Linux, the best way to install it is through the system package manager
 (<code>apt</code>, <code>yum</code>, <code>emerge</code>, etc). Once you have LaTeX installed,
 just follow the instructions above to create the
-<code>thesis.cls</code> and <code>thesiscitations.pdf</code> files.
+<code>thesis.cls</code> and <code>thesiscitations.sty</code> files.
 
 After that:
 1. Create new blank project in Overleaf
