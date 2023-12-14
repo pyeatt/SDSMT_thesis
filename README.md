@@ -3,15 +3,17 @@
 The complete distribution contains all of the files that you need for using LaTeX to format your South Dakota School of Mines and Technology thesis or dissertation.
 An example of how to use this LaTeX package is also provided (<code>harvey.tex</code>, <code>harvey.bib</code>, <code>images/gnu.pdf</code> and <code>images/gnat.pdf</code>).
 
- This class is distributed in doctex format and contains both
- documentation and macros in the .dtx files.  You may need to generate
- the documentation and the class files as follows:
+This class is distributed in doctex format and contains both documentation and macros in the <code>.dtx</code>
+files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.
+Overleaf cannot perform the setup, but you can upload your document to Overleaf after you have set it up.
+
+On a system with LaTeX installed, you can generate the documentation and the class files as follows:
 
 <H2>Setup</H2>
 <H4>WINDOWS</H4>
 
-1. Open the file browser and navigate to the thesis directory.
-2. Double-click on the "setup" file and cross your fingers.
+1. Open the file browser and navigate to the <code>thesis</code> directory.
+2. Double-click on the <code>setup</code> file and cross your fingers.
 
 <H4>Unix/MacOS/Linux</H4>
 
