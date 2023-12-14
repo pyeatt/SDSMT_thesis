@@ -53,7 +53,7 @@ before you upload the thesis package to overleaf.  This means that you will need
 has at least a minimal LaTeX installed.  There are many LaTeX packages available for Windows,
 Linux, and MacOS.  I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html). 
 If you are using Linux, the best way to install it is through the system package manager
-(<code>apt</code> <code>yum</code> <code>emerge</code>, etc). Once you have LaTeX installed,
+(<code>apt</code>, <code>yum</code>, <code>emerge</code>, etc). Once you have LaTeX installed,
 just follow the instructions above to create the
 <code>thesis.cls</code> and <code>thesiscitations.pdf</code> files.
 
