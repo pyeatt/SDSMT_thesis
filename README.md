@@ -59,8 +59,8 @@ just follow the instructions above to create the
 
 After that:
 1. Create new blank project in Overleaf
-2. Upload all TEX (.tex .bib .dtx .cls .sty) files
-3. Re-name <code>harvey.tex</code> and use that as the primary .tex file
+2. Upload all of the files in the SDSMT_thesis directory
+3. Re-name <code>harvey.tex</code> and use that as the primary LaTeX file or copy/paste from <code>harvey.tex</code> into <code>main.tex</code>
 4. by default, images need to be in a folder labelled "images" 
 
 
