@@ -1,14 +1,13 @@
 \documentclass[12pt]{thesis}
 
-
-% The default font is Computer Modern Roman for text and math. Uncomment
-% one of the following to choose a different font set.
-% \usepackage{mathptmx} % Times New Roman with math fonts
+% The LaTeX default font is Computer Modern Roman for text and
+% math. We will switch to times roman, because that is preferred by
+% the Graduate school.  However, you can comment the times fonts and
+% uncomment one (or more) of the others to choose a different font set.
+\usepackage{mathptmx}   % Times New Roman with matching math fonts
 % \usepackage{newcent}  % new century schoolbook font
 % \usepackage{bookman}  % bookman font
 % \usepackage{fourier}  % Utopia (text) and Fourier (math) font
-\usepackage{times}
-\usepackage{mathptm}
   
 \usepackage{graphicx}
 \usepackage{rotating}
@@ -98,17 +97,19 @@ is no resemblance between the two, whatsoever.
 \listoffigures
 
 %% Uncomment following lines if you want a list of symbols
-% \begin{listofsymbols}
-% \begin{tabular}{ll}
-%   $\mathcal{G}_t$ & Gnat\\
-%   $\mathcal{G}_u$ & Gnu
-% \end{tabular}
-% \end{listofsymbols}
+%% \gltitle{List of Symbols}
+%% \begin{genericlist}
+%% \begin{tabular}{ll}
+%%   $\mathcal{G}_t$ & Gnat\\
+%%   $\mathcal{G}_u$ & Gnu
+%% \end{tabular}
+%% \end{genericlist}
 
 %% Uncomment following lines if you want a list of keywords
-% \begin{listofkeywords}
-% \noindent Gnat, Gnu
-% \end{listofkeywords}
+%% \gltitle{List of Keywords}
+%% \begin{genericlist}
+%% \noindent Gnat, Gnu
+%% \end{genericlist}
 
 %% Uncomment following lines if you want a dedication
 % \begin{dedication}

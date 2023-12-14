@@ -138,9 +138,16 @@
 % macros.
 % \vspace{\baselineskip}
 %
-% If you are doing a Computer Science Thesis, then you should use
+
+% You may prefer to use a different bibliography style such as
 % |\bibliographystyle{acm}| or |\bibliographystyle{ieeetr}|, and
-% \emph{not} have the |\usepackage{thesiscitations}| command.
+% \emph{not} have the |\usepackage{thesiscitations}| command.  It is
+% not compatible with those bibliography styles.  However, the extra
+% macros in |thesiscitations| (|\citeN|, |\citeNP|, etc) are quite
+% nice.  I would recommend using them unless you advisor objects. Read
+% the documentation in |thesiscitations.pdf| for the list of all
+% variations of the |\cite| macro.
+
 %
 % \section{Chapter Title Position}
 %
@@ -235,10 +242,10 @@
 \author{---}
 % \fi
 %
-% \DescribeMacro{\degree} defines the type of degree.  It should be\\
+% \DescribeMacro{\degree} defines the type of degree.  Here are some examples:\\
 % |\degree{Doctor of Philosophy in Underwater Basket Weaving}|\\
 % |\degree{Master of Science in Applied Handball}|\\
-% |\degree{Master of Arts in Finger Painting}|\\ or whatever is
+% |\degree{Master of Arts in Finger Painting}|\\ Use whatever is
 % appropriate for your degree.
 % \iffalse
 \newcommand{\degree}[1]{\gdef\Zdegree{#1}}
@@ -272,11 +279,13 @@
 %
 % \DescribeMacro{\signatureline} adds a line to the signature page where someone needs to sign. Examples:\\
 % |\signatureline{Major Professor --- Dimm Whitt, Ph.D., Department of Zoology}|\\
-% |\signatureline{Graduate Division Representative --- E.\ Nigma, Ph.D., Department of Philosophy}|\\
+% |\signatureline{Grad. Div. Rep. --- E.\ Nigma, Ph.D., Department of Philosophy}|\\
 % |\signatureline{Committee Member --- Chip Munk, Ph.D., Department of Zoology}|\\
-% |\signatureline{Head of the Zoology Department --- Earl E. Bird, Ph.D.}|\\
+% |\signatureline{Head of the Zoology Department --- Earl E.\ Bird, Ph.D.}|\\
 % |\signatureline{Dean of Graduate Education --- Raney Daze}|\\
-%
+% \LaTeX does not care what you type as the argument, but the Graduate
+% School does. Read their Thesis and Dissertation Writing Manual for further
+% instructions on the signature lines.
 % \iffalse
 \newcommand{\make@signatureline}[1]{{%\footnotesize
 \noindent\parbox{\textwidth}{\noindent\parbox[t][2\baselineskip]{4in}{\noindent\rule{4in}{1pt}\\\raggedright\noindent #1}\hfill\noindent\parbox[t]{1.5in}{\rule{1.5in}{1pt}\\\noindent Date}}}}
@@ -377,8 +386,8 @@ Date Defended: \Zdefdate\\%
 %
 % \DescribeMacro{\makecopyright} The  |\makecopyright|
 % command creates a copyright page. Read the section
-% about copyright in the Thesis and Dissertation Writing
-% Instructions from the graduate school.
+% about copyright in the Thesis and Dissertation Writing Manual
+% from the graduate school.
 % \iffalse
 \newcommand{\makecopyright}{\newpage\thispagestyle{empty}
 \vspace*{0.3\textheight}%
@@ -429,7 +438,7 @@ Date Defended: \Zdefdate\\%
 %
 % \DescribeEnv{abstract} The abstract environment is used
 % the same as for any other \LaTeX\xspace document.  Just use
-% |\begin{abstract} text \end{abstract}| as usual.
+% |\begin{abstract} text of the abstract \end{abstract}| as usual.
 % \iffalse
 %%\renewenvironment{abstract}{\singlespace\newpage
 \renewenvironment{abstract}{\newpage
@@ -493,33 +502,39 @@ Date Defended: \Zdefdate\\%
   \@starttoc{lof}}
 % \fi
 %
-% \DescribeEnv{listofsymbols} The |listofsymbols| environment lets you
-% include a table of symbols and acronyms.  You must build the table
-% yourself within the environment, using the table or other environments.
-% Use |\begin{listofsympols}| text 
-% |\end{listofsymols}| if you want one.
+
+% \DescribeEnv{genericlist} The |genericlist| environment and the
+% |\gltitle| macro provide a way for you to include any additional
+% lists at the beginning of your document, use them to create lists of
+% acronynms, abbreviations, symbols, equations, keywords, etc.  You must build
+% the table yourself within the environment, using the |table| or
+% other environments.  Use |\gltitle| to set the title, then
+% |\begin{genericlist}| text |\end{genericlist}| to create the list
+% page(s).  Do this for each additional list that you want to include
+% in your document.  The default title is ``Generic List''.  The
+% |\gltitle| macro and the |genericlist| environment can be used
+% multiple times to create as many lists as you need.
 % \iffalse
-\newenvironment{listofsymbols}{\singlespace\newpage
+\newenvironment{genericlist}{\singlespace\newpage
 %%  \addcontentsline{toc}{chapter}{\protect\numberline{}List of Symbols and Acronyms}
-  \addcontentsline{toc}{chapter}{List of Symbols and Acronyms}
-  \@makeschapterhead{\centerline{List of Symbols and Acronyms}}
+  \addcontentsline{toc}{chapter}{\gl@title}
+  \@makeschapterhead{\centerline{\gl@title}}
   \vskip 20pt\par}{\newpage}
+% \fi
+
+% \DescribeMacro{\gltitle} The |\gltitle| macro allows you to change
+% the title of the following |genericlist| environment.  For example,
+% |\gltitle{List of Acronyms and Abbreviations}| will set the title of
+% the next generic list to ``List of Acronyms and Abbreviations''.
+% \iffalse
+\newcommand\gl@title{Generic List}
+\newcommand\gltitle[1]{\renewcommand\gl@title{#1}}
 % \fi
 %
-% \DescribeEnv{listofkeywords} The |listofkeywords| environment lets
-% you include a table of keywords.  You must build the table yourself
-% within the environment.  Use |\begin{listofkeywords}| |text|
-% |\end{listofkeywords}| if you want one.
-% \iffalse
-\newenvironment{listofkeywords}{\singlespace\newpage
-%%  \addcontentsline{toc}{chapter}{\protect\numberline{}List of Keywords}
-  \addcontentsline{toc}{chapter}{List of Keywords}
-  \@makeschapterhead{\centerline{List of Keywords}}
-  \vskip 20pt\par}{\newpage}
-% \fi
+
 %
 % \DescribeEnv{dedication} The dedication environment 
-% creates a new page with at title for the dedication.  It
+% creates a new page with title for the dedication.  It
 % works very much like the |abstract| environment.
 % \iffalse
 %%\newenvironment{dedication}{\singlespace\newpage
@@ -545,14 +560,14 @@ Date Defended: \Zdefdate\\%
 % \section{Commands and environments within the body}
 % Commands and envionments within the body text should work as normal
 % for the report document class.  Use |\chapter{}|, |\section{}|, etc.
-% You may wish to write the body in a separate file and just include 
-% it at the appropriate place.
+% You may wish to write the chapter bodies in a separate files and just include 
+% them at the appropriate place in the main \LaTeX\ file.
 %
 % \section{Commands and environments within the supplementaries}
 % The supplementaries section contains the bibliography, appendices, 
 % and other additional information that you may wish to include.
-% There is a file named |thesis.bst| that is supposed to
-% be supplied with the thesis class.
+% There is a file named |thesis.bst| that is included in the SDSMT
+% thesis package.
 % If you do not have |thesis.bst|, or do not want to use it, then you can use
 % the Chicago bibliography style (or any style appropriate for your field).
 % Other than that, the bibliography should be created as you would
@@ -679,18 +694,9 @@ Date Defended: \Zdefdate\\%
 %
 % \DescribeEnv{vita} The vita environment creates a new page with at
 % title for the vita.  It works very much like the |abstract|
-% environment. All SDSMT theses and dissertations must have a vita,
-% not over one page in length.  It must be the last page in the thesis
-% or dissertation and must contain the following information:
-% \begin{enumerate}
-% \item place and date of birth,
-% \item place and date of high school graduation,
-% \item place and date of college graduation, including degree an major,
-% \item place and date of receipt of master's degree, including major, (for dissertations only), 
-% \item vocational and professional experience (not summer jobs), including dates, nature of position, and school or organization,
-% \item military experience, with indication of professional relevance, if any,
-% \item scholarly publications, exhibits of creative work, membership in professional organizations and honorary societies.
-% \end{enumerate}
+% environment. All SDSMT theses and dissertations must have a vita.
+% Read the Thesis and Dissertation Writing Manual
+% from the graduate school for specific instructions about the vita page. 
 % \iffalse
 \newenvironment{vita}{\newpage
 %%  \addcontentsline{toc}{chapter}{\protect\numberline{}Vita}
@@ -764,234 +770,10 @@ Date Defended: \Zdefdate\\%
 % \fi
 %
 % \section{Example}
-% \begin{verbatim}
-% \documentclass[12pt]{thesis}
 
-% \usepackage{graphicx}
-% \usepackage{makeidx}
-% \usepackage{subfig}
-
-% % Uncomment the following two lines and comment out the third one
-% % if you want to use the Chicago Manual based bibliography.
-% %\usepackage{thesiscitations}
-% %\bibliographystyle{thesis}
-% \bibliographystyle{ieeetr}
-
-% % Uncomment next line if you want chapter titles centered
-% %\centertitles
-
-% Uncomment next line to print a double-spaced draft version
-% %\dsdraft
-
-% Uncomment next line to print a single-spaced draft version
-% %\ssdraft
-
-% \makeindex
-
-% \doctype{thesis}
-% \title{A Compative Study of Gnus and Gnats}
-% \author{Harvey Finklebaum}
-% \degree{Doctor of Philosophy in Zoology}
-% \defensedate{April 4, 2013}
-% \gradyear{2013}
-% \department{Zoology}
-
-% % The following commands add a signature line for each person who needs
-% % to sign the thesis/dissertation
-% \signatureline{Major Professor --- Dimm Whitt, Ph.D., Department of Zoology}
-% \signatureline{Graduate Division Representative --- E.\ Nigma, Ph.D., Department of Philosophy}
-% \signatureline{Committee Member --- Chip Munk, Ph.D., Department of Zoology}
-% \signatureline{Committee Member --- Gail Force, Ph.D., Department of Meteorology }
-% % the line break in the next line makes the spacing come out right.
-% \signatureline{Head of the Zoology Department ---   Earl E. Bird, Ph.D.\\}
-% \signatureline{Dean of Graduate Education --- Raney Daze}
-
-% \begin{document}
-% \maketitle
-% \preliminaries
-
-% \begin{abstract}
-% I present a fascinating and
-% thought provoking study, comparing gnus and gnats.
-% The results of the study show conclusively that there
-% is no resemblance between the two, whatsoever.
-% \end{abstract}
-
-% \begin{acknowledgments}
-% I would like to thank my advisor, Dr.\ Dimm Whitt, for
-% all of the support he has given me.
-% \end{acknowledgments}
-
-% \tableofcontents
-
-% \listoftables
-
-% \listoffigures
-
-% \begin{listofsymbols}
-% \begin{tabular}{ll}
-% $\mathcal{G}_t$ & Gnat\\
-% $\mathcal{G}_u$ & Gnu
-% \end{tabular}
-% \end{listofsymbols}
-
-% \begin{listofkeywords}
-% \noindent Gnat, Gnu.
-% \end{listofkeywords}
-
-% \begin{dedication}
-% In loving memory of 
-% my grandmother.
-% \end{dedication}
-
-% \begin{preface}
-% Before we begin, just let me say one thing.
-% Gnat and gnu are both begin with ``gn,'' and
-% the purpose of this work was to see if there
-% are any other resemblances.
-% This thesis has taken 45 years of work, and
-% I don't have much time left in this world, but it
-% has been worth it.  When the time comes,
-% I would like to die as my grandmother did, peacefully in
-% her sleep, not screaming like the passengers in her car.
-% \end{preface}
-
-% \body
-
-% \chapter{Introduction}
-% This thesis is the first work ever done in 
-% the fascinating study of comparison of gnats to gnus.
-% It is groundbreaking.  There literally is nothing
-% like it.  However, there have been a few studies
-% of other things.
-
-% For example, \citeN{Kringle} showed that apples and
-% goats have almost nothing in common, other than both
-% being red.  The major problem with Kringle's study is that
-% he used a goat that had been spray painted red, and 
-% his apple was a golden delicious variety.  Criticism
-% of Kringle's methods has been harsh, and so far, no
-% one has been able to replicate his results.
-
-% Several researchers have compared trout to eagles\cite{Simmons,Sheppard}.
-% The consensus that has emerged is that they are quite different,
-% and only an idiot would try to eat an eagle\cite{Idiot}.
-
-% \chapter{Comparison}
-% In this chapter, I will present the methods for my comparison, the
-% results, and fill in with a lot of gibberish.  For instance, I will
-% say things like ``Gnats and Gnus come in twos'' in order to fill space
-% and make my thesis seem longer than it really is.  This is a tactic
-% used by some people to hide the fact that their research is worthless.
-% The idea is that if the thesis is long enough and boring enough, the
-% thesis comittee members will go to sleep every time they try to read it.
-
-% Another thing that I may do is to use very long words, such as
-% onomatopoeia, for no apparent reason.  By employing voluminous
-% instances of obfuscatory and expansive vocables, the lack of
-% quintessence of this monograph can be adumbrated from all but
-% the most erudite, didactic, and scholarly bibliophiles.
-
-% \section{Visual comparison}
-% \index{comparison!visual}
-
-% \begin{table}
-% \caption{Results of visual comparison studies.}
-% \begin{center}
-%   \begin{tabular}{|c|c|}
-%     \hline
-%     \bf Categories & \bf Percent Correct\\
-%     \hline
-%     \hline
-%     insect/mammal & 76\\
-%     \hline
-%     gnat/gnu & 69\\
-%     \hline
-%   \end{tabular}
-% \end{center}
-% \label{table:comp1}
-% \end{table}
-
-% The first test that I performed was a visual comparison of gnats and
-% gnus.  First, I went on the internet and downloaded several thousand
-% pictures of gnats, and one picture of a gnu.  Then, I had two
-% volunteers compare them and categorize them as insect\index{insect} or
-% mammal.\index{mammal} Next, I selected another group of volunteers and
-% had them classify the photographs as either gnat or gnu.
-
-
-% The results of this comparison are shown in Table~\ref{table:comp1}.
-% As can be seen, both volunteers (myself and my advisor) were able to
-% correctly classify most of the photographs.  As a result, we gave each
-% other little gold stars.  
-% \begin{figure}
-% \begin{center}
-% \subfloat{\resizebox{2in}{!}{\includegraphics{images/gnu.pdf}}}
-% \subfloat{\resizebox{2in}{!}{\includegraphics{images/gnat.pdf}}}
-% \end{center}
-% \caption{Photographs of a gnu (left) and a gnat (right).}
-% \label{figure:photos}
-% \end{figure}
-% For those who are interested,
-% Figure~\ref{figure:photos} shows the gnu photograph and one of the gnat
-% photographs.
-
-% \section{Comparison by Size}
-% \index{comparison!size}
-% As can be seen from Figure~\ref{figure:photos}, photographs of
-% gnats are slightly larger than photographs of gnus.  This leads
-% us to believe that statistically, gnats are slightly larger
-% than gnus.  Mathematically, we express this as follows:
-% \begin{equation}
-% S(\mathcal{G}_t) > S(\mathcal{G}_u) \forall \mathcal{G}_t,\mathcal{G}_u,
-% \end{equation}
-% where $\mathcal{G}_t$ is a photograph of a gnat and
-% $\mathcal{G}_u$ is a photograph of a gnu.  The $S()$ function
-% calculates the ``size'' of the photograph.
-
-% \chapter{Conclusions}
-
-% Well, there you have it.  My advisor and I were able to
-% tell the difference between a photograph of a gnat and
-% a gnu most of the time.  Also, gnats are larger than gnus, and
-% therefore, they are significantly different.
-
-% In the future, we plan to apply the techniques developed
-% in this research to answer the age old question of 
-% whether dogs and ducks are the same thing.
-
-% \supplementaries
-
-% \pagebreak
-
-% \bibliography{harvey.bib}
-
-% \begin{appendices}
-
-% \appendix{Appendix A} Well, I really have nothing more to say,
-% but wanted to have an appendix.
-
-% \end{appendices}
-
-% \begin{gloss}
-% I don't have a glossary either, but this is what the page
-% would look like if I did.
-% \end{gloss}
-
-% %\begin{abbreviations}
-% %gnu is abbreviated to gnu\\
-% %gnat is abbreviated to gnat
-% %\end{abbreviations}
-
-% \printindex
-
-% \begin{vita}
-% \noindent Born: July 4, 1776, Cancun, Mexico.\\
-% Education:
-% High school: Napolean Bonaparte High, Versailles, 1923.
-% College: Bachelor of Science in Basket Weaving, Harvard on the Hill, Paris, Texas, 1989.
-% \end{vita}
-
-% \end{document}
-
-%\end{verbatim}
+% The SDSMT \LaTeX\ thesis package includes two files: |harvey.tex|
+% and |harvey.bib| to provide examples of most of the commands
+% provided by the package.  You can use them as a template for your
+% thesis or dissertation.  Just re-name them or copy them to new
+% files. and you are ready to start writing your thesis or
+% dissertation!
