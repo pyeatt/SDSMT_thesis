@@ -27,9 +27,9 @@ If the automatic setup fails, you can generate everything manually
 <ol>
 <li> To generate documentation:</li>
  <ol type="a">
- <li> Type "pdflatex thesis.dtx" to <code>create thesis.pdf</code> </li>
+ <li> Type "pdflatex thesis.dtx" to create <code>thesis.pdf</code> </li>
  <li> Type "pdflatex thesiscitations.dtx" to create <code>thesiscitations.pdf</code></li>
- <li> You can print <code>thesis.pdf</code> or view it to see how the thesis class works.</li>
+ <li> You can print <code>thesis.pdf</code> and <code>thesiscitations.pdf</code> or view them to see how to use the thesis class.</li>
  </ol>
 
 <li> To generate the class file:</li>
