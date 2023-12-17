@@ -7,7 +7,10 @@ This class is distributed in doctex format and contains both documentation and m
 files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.
 Overleaf cannot perform the setup, but you can upload your document to Overleaf after you have set it up.
 
-On a system with LaTeX installed, you can generate the documentation and the class files as follows:
+After initial setup, you can print <code>thesis.pdf</code> and <code>thesiscitations.pdf</code> or view them to see how to use the thesis class.</li>
+
+On a system with LaTeX installed, you can generate the documentation and the class files 
+as follows:
 
 <H2>Setup</H2>
 <H4>WINDOWS</H4>
@@ -29,7 +32,6 @@ If the automatic setup fails, you can generate everything manually
  <ol type="a">
  <li> Type "pdflatex thesis.dtx" to create <code>thesis.pdf</code> </li>
  <li> Type "pdflatex thesiscitations.dtx" to create <code>thesiscitations.pdf</code></li>
- <li> You can print <code>thesis.pdf</code> and <code>thesiscitations.pdf</code> or view them to see how to use the thesis class.</li>
  </ol>
 
 <li> To generate the class file:</li>
