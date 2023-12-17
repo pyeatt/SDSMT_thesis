@@ -12,8 +12,8 @@ On a system with LaTeX installed, you can generate the documentation and the cla
 <H2>Setup</H2>
 <H4>WINDOWS</H4>
 
-1. Open the file browser and navigate to the <code>thesis</code> directory.
-2. Double-click on the <code>setup</code> file and cross your fingers.
+1. Open the file browser and navigate to the <code>SDSMT_thesis</code> directory.
+2. Double-click on the <code>setup</code> file and cross your fingers. It will probably work.
 
 <H4>Unix/MacOS/Linux</H4>
 
