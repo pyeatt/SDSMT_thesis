@@ -17,7 +17,7 @@ On a system with LaTeX installed, you can generate the documentation and the cla
 
 <H4>Unix/MacOS/Linux</H4>
 
-1. Open a command prompt in the thesis_class directory.
+1. Open a command prompt in the <code>SDSMT_thesis</code> directory (or use  <code>cd</code> get to it.)
 2. Type "make"
 
 
