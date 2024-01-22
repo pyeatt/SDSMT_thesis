@@ -5,6 +5,7 @@ An example of how to use this LaTeX package is also provided (<code>harvey.tex</
 
 This document class is distributed in doctex format and contains both documentation and macros in the <code>.dtx</code>
 files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.   I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+<br>
 <b>Warning:</b> The default installation of TeXLive requires considerable hard disk space.  You can choose "advanced" during the install, then select "core scheme and add-ons" to reduce space requirements.
 
 Overleaf cannot perform the setup, but you can upload your document to Overleaf after you have set it up.
