@@ -29,7 +29,9 @@ For the initial setup, you will need access to a system that has at least a mini
 
 
 <H4>Manual setup</H4>
+
 For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+
 
 If the automatic setup fails, you can generate everything manually
 
