@@ -4,7 +4,7 @@ The complete distribution contains all of the files that you need for using LaTe
 An example of how to use this LaTeX package is also provided (<code>harvey.tex</code>, <code>harvey.bib</code>, <code>images/gnu.pdf</code> and <code>images/gnat.pdf</code>).
 
 This class is distributed in doctex format and contains both documentation and macros in the <code>.dtx</code>
-files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.
+files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.   I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html). 
 Overleaf cannot perform the setup, but you can upload your document to Overleaf after you have set it up.
 
 After initial setup, you can print <code>thesis.pdf</code> and <code>thesiscitations.pdf</code> or view them to see how to use the thesis class.</li>
@@ -15,16 +15,22 @@ as follows:
 <H2>Setup</H2>
 <H4>WINDOWS</H4>
 
+ For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+ 
 1. Open the file browser and navigate to the <code>SDSMT_thesis</code> directory.
 2. Double-click on the <code>setup</code> file and cross your fingers. It will probably work.
 
 <H4>Unix/MacOS/Linux</H4>
+
+For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
 
 1. Open a command prompt in the <code>SDSMT_thesis</code> directory (or use  <code>cd</code> get to it.)
 2. Type "make"
 
 
 <H4>Manual setup</H4>
+For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+
 If the automatic setup fails, you can generate everything manually
 
 <ol>
