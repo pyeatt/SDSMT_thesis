@@ -32,8 +32,9 @@ For Linux, I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.
 For MacOS X, I recommend [MacTeX](https://www.tug.org/mactex), which installs TeXLive.
 
 After installing LaTeX:
-1. Open a command prompt in the <code>SDSMT_thesis</code> directory (or use  <code>cd</code> get to it.)
-2. Type "make"  (you may need to install "make" first)
+1. Download the zip file from GitHub, then extract it to your hard drive.
+2. Open a command prompt in the <code>SDSMT_thesis</code> directory (or use  <code>cd</code> get to it.)
+3. Type "make"  (you may need to install "make" first)
 
 
 <H4>Manual setup</H4>
