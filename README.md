@@ -6,7 +6,6 @@ An example of how to use this LaTeX package is also provided (<code>harvey.tex</
 This document class is distributed in doctex format and contains both documentation and macros in the <code>.dtx</code>
 files.  For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.   I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
 <br>
-<b>Warning:</b> The default installation of TeXLive requires considerable hard disk space.  You can choose "advanced" during the install, then select "core scheme and add-ons" to reduce space requirements.
 
 Overleaf cannot perform the setup, but you can upload your document to Overleaf after you have set it up.
 
@@ -18,23 +17,30 @@ as follows:
 <H2>Setup</H2>
 <H4>WINDOWS</H4>
 
- For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
- 
-1. Open the file browser and navigate to the <code>SDSMT_thesis</code> directory.
-2. Double-click on the <code>setup</code> file and cross your fingers. It will probably work.
+For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+<b>Warning:</b> The default installation of TeXLive requires slightly over 8Gb of disk space and may take an hour or more to install.
+
+After installing LaTeX:
+1. Download the zip file from GitHub, then extract it to your hard drive.
+2. Open the file browser and navigate to the <code>SDSMT_thesis</code> directory.
+3. Double-click on the <code>setup</code> file and cross your fingers. It will probably work.
 
 <H4>Unix/MacOS/Linux</H4>
 
-For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+For the initial setup, you will need access to a system that has at least a minimal LaTeX installed.
+For Linux, I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
+For MacOS X, I recommend [MacTeX](https://www.tug.org/mactex), which installs TeXLive.
 
+After installing LaTeX:
 1. Open a command prompt in the <code>SDSMT_thesis</code> directory (or use  <code>cd</code> get to it.)
-2. Type "make"
+2. Type "make"  (you may need to install "make" first)
 
 
 <H4>Manual setup</H4>
 
-For the initial setup, you will need access to a system that has at least a minimal LaTeX installed. I recommend [TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
-
+For the initial setup, you will need access to a system that has at
+least a minimal LaTeX installed. I recommend
+[TeXLive](https://www.tug.org/texlive/acquire-netinstall.html).
 
 If the automatic setup fails, you can generate everything manually
 
