@@ -155,6 +155,7 @@ ENTRY
     chapter
     edition
     editor
+    eprint
     howpublished
     institution
     journal
@@ -549,6 +550,13 @@ FUNCTION {format.title}
 %    { title }
 %  if$
 %}
+
+FUNCTION {format.eprint}
+{ eprint empty$
+    { "" }
+    { "\href{http://arxiv.org/abs/"  eprint * "}{" * eprint * "}" *}
+  if$
+}
 
 FUNCTION {n.dashify}
 { 't :=
@@ -1025,6 +1033,7 @@ FUNCTION {article}
       format.pages output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1059,6 +1068,7 @@ FUNCTION {book}
       format.book.crossref output.nonnull
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1075,6 +1085,7 @@ FUNCTION {booklet}
   new.block
   howpublished output
   address output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1113,6 +1124,7 @@ FUNCTION {inbook}
       format.book.crossref output.nonnull
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1144,6 +1156,7 @@ FUNCTION {incollection}
     format.chapter.pages output
   }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1174,6 +1187,7 @@ FUNCTION {inproceedings}
       format.pages output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1203,6 +1217,7 @@ FUNCTION {manual}
 %  address output
 %  ":" output
 %  organization output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1221,6 +1236,7 @@ FUNCTION {mastersthesis}
   "Master's thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1235,6 +1251,7 @@ FUNCTION {misc}
   format.title output
   new.block
   howpublished output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1253,6 +1270,7 @@ FUNCTION {phdthesis}
   "Ph.\ D. thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1277,6 +1295,7 @@ FUNCTION {proceedings}
   new.sentence
   organization output
   publisher output.colon
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1296,6 +1315,7 @@ FUNCTION {techreport}
   institution
   "institution" output.check
   address output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -1310,6 +1330,7 @@ FUNCTION {unpublished}
   new.block
   format.title
   "title" output.check
+  format.eprint output
   new.block
   note "note" output.check
   fin.entry

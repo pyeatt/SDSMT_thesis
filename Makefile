@@ -61,5 +61,5 @@ clean:
 
 realclean:
 	rm -f *~
-	rm -f bib123 *.aux *.bbl *.blg *.lof *.log *.lot $(MAINPDF) *.toc *.idx *.ind *.ilg *.pdf *.sty *.cls
+	rm -f bib123 *.aux *.bbl *.blg *.lof *.log *.lot $(MAINPDF) *.toc *.idx *.ind *.ilg *.pdf *.sty *.cls *.out *.hd
 
