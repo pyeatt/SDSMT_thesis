@@ -232,4 +232,51 @@
      {\newcommand{\refname}{Bibliography}}%
    }%
    {}%
+   % To change the default prefix, redefine this command within your own code.
+%% It takes no argument, which is different from the doipubmed package.
+\newcommand{\doitext}{doi:}
+%  COMMANDS for DOI field
+% To change the default DOI URL resoloution URL, redefine this command
+% within your own code.
+% Previous versions of this package always used http://dx.doi.org/ but
+% The preferred address is now as given here, https://doi.org/
+\newcommand{\doiurl}{https://doi.org/}
+% The meat of the code.
+% The first command opens a group, and changes a few catcodes.
+\newcommand*{\doi}{% 
+  \begingroup 
+  \lccode`\~=`\#\relax 
+  \lowercase{\def~{\#}}%
+  \lccode`\~=`\_\relax
+  \lowercase{\def~{\_}}%
+  \lccode`\~=`\<\relax 
+  \lowercase{\def~{\textless}}%
+  \lccode`\~=`\>\relax 
+  \lowercase{\def~{\textgreater}}%
+  \lccode`\~=0\relax 
+  \catcode`\#=\active 
+  \catcode`\_=\active 
+  \catcode`\<=\active 
+  \catcode`\>=\active 
+  \@doi
+}
+% This is the actual command which processes the argument, with the catcodes 
+% set in the previous command
+% it closes the group, and spits out the url.
+\def\@doi#1{% 
+  \let\#\relax
+  \let\_\relax
+  \let\textless\relax 
+  \let\textgreater\relax 
+  \edef\x{\toks0={{#1}}}% 
+  \x
+  \edef\#{\@percentchar23}%
+  \edef\_{_}%
+  \edef\textless{\@percentchar3C}% instead of {\string<} for Apple
+  \edef\textgreater{\@percentchar3E}% instead of {\sting>} for Apple
+  \edef\x{\toks2={\noexpand\href{\doiurl#1}}}% 
+  \x
+  \edef\x{\endgroup\doitext\the\toks2 \the\toks0}%
+  \x
+}
 % \fi
